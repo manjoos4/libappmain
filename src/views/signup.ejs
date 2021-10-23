@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+    <script defer src="js/signup.js"></script>
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+<body id="signupbody">
+  <!-- navbar starts here -->
+      
+
+      <!-- Login form creation starts-->
+  <section class="container-fluid" style="margin-top:20px;">
+    <!-- row and justify-content-center class is used to place the form in center -->
+    <section class="row justify-content-center">
+      <section class="col-12 col-sm-6 col-md-4">
+        <form class="form-container" method="POST" action="/signup/add" onsubmit="return validateemail()&& validatepnum()&&validatepwd()&&checkPasswordLength()">
+        <form class="form-container">
+
+          <div class="form-group">
+          <h4 class="text-center font-weight-bold"> Sign Up </h4>
+          <label for="FirstName1">First Name</label>
+           <input type="text" name="fname" class="form-control" id="FirstName1" placeholder="Enter First Name" required>
+           <label for="email">Email Address</label>
+           <input type="text" name="email" class="form-control" id="email" placeholder="Enter email">
+           <label for="error" id="error"></label>
+           <br>
+           <label for="mblnum">Mobile Number</label>
+           <input type="text" name="mblnum" class="form-control" id="mblnum" placeholder="Enter Mobile number">
+           <label for="error1" id="error1"></label> 
+           <br>
+            <label for="InputPassword1">Password</label>
+            <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Password" onkeyup='checkPasswordLength(this.value)' name="pwd">
+
+           <span id="errorSpan" style="color:red;">******</span>
+            <br>
+            <label for="error2" id="error2"></label> 
+            <br>
+            <!-- <label for="InputPassword1">Retype Password</label>
+            <input type="password" class="form-control" id="InputPassword1" placeholder="Password"> -->
+          </div>
+          </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+           </div>
+        </form>
+      </section>
+    </section>
+  </section>
+<!-- Login form creation ends -->
+
+
+<!-- <script src="form.js"></script> -->
+</body>
+</html> 
