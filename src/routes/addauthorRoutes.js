@@ -2,6 +2,8 @@ const express=require('express');
 const addauthorRouter=express.Router();
 const Authordata=require('../model/Authordata');
 const multer=require('multer');
+const alert = require('alert');
+
 var storage=multer.diskStorage({
     destination:function(req,file,cb){
         cb(null,'./public/images');
@@ -28,6 +30,7 @@ addauthorRouter.post('/add',upload,function(req,res){
             }
             var author=Authordata(item);
             author.save();
+            alert('Author added Successfully');
             res.redirect('/authors');
 });
 return addauthorRouter;

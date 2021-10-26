@@ -2,6 +2,8 @@ const express=require('express');
 const addbookRouter=express.Router();
 const Bookdata= require('../model/Bookdata');
 const multer=require('multer');
+const alert = require('alert');
+
 var storage=multer.diskStorage({
     destination:function(req,file,cb){
         cb(null,'./public/images');
@@ -30,6 +32,7 @@ image:req.file.filename
     }
     var book=Bookdata(item);
     book.save();
+    alert('Book added successfully');
     res.redirect('/books');
 });
 return addbookRouter;

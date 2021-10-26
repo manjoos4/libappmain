@@ -1,6 +1,8 @@
 const express=require('express');
 const signupRouter=express.Router();
 const Signupdata=require('../model/Signupdata');
+const alert = require('alert');
+
 
 function router(nav){
 signupRouter.get('/',function(req,res){
@@ -23,9 +25,12 @@ signupRouter.post("/add",(req,res)=>{
         else{
             if(user !== null){
                 console.log("user already taken");
+                alert('user already taken');
+                res.redirect('/signup');
             }else{
             var sign=Signupdata(item);
             sign.save();
+            alert('user added successfully');
             res.redirect('/');
         }
     }

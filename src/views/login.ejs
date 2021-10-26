@@ -11,25 +11,26 @@
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-    <script defer src="js/signin.js"></script>
+    <!-- <script defer src="js/signin.js"></script> -->
 		<link href="css/styles.css" rel="stylesheet">
 	</head>
 <body background="/images/library.jpg" style="background-repeat: no-repeat;background-size:cover">
    <section class="container-fluid" style="margin-top: 48px;margin-left: 550px;">
       <section class="col-12 col-sm-6 col-md-4">
-        <form class="form-container" id="form"  onsubmit="return validate()">
+     
+        <form class="form-container" id="form" method="POST" action="/login/add"  onsubmit="return validate()">
         <div class="form-group">
           <h4 class="text-center font-weight-bold" style="color:greenyellow"> You can Sign In/Sign Up Here </h4>
           <br>
           <label for="username" style="color:greenyellow; font-weight: bold;" >User Name</label>
-           <input type="text" class="form-control" id="usrnm" placeholder="Enter User Name">
+           <input type="text" name="username" class="form-control" id="usrnm" placeholder="Enter User Name">
            <br>
-           <label for="error" id="error"></label>
+           <label for="error"  name="error"id="error"></label>
         <div class="form-group">
           <label for="InputPassword1" style="color:greenyellow; font-weight: bold;">Password</label>
-          <input type="password" class="form-control" id="pwd" placeholder="Enter Password">
+          <input type="password" name="password" class="form-control" id="pwd" placeholder="Enter Password">
           <br>
-           <label for="error2" id="error2"></label>
+           <label for="error2" name="error2" id="error2"></label>
         </div>
         <button  class="glow-on-hover" type="submit" value="login">LOGIN</button>
         <div class="form-footer">

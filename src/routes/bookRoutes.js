@@ -3,6 +3,7 @@ const express = require('express');
 const booksRouter=express.Router();
 const Bookdata=require('../model/Bookdata');
 const multer=require('multer');
+const alert = require('alert');
 
 function router(nav){
     // var books=[
@@ -72,7 +73,7 @@ booksRouter.get('/delete/:id',function(req,res,next){
             res.redirect('/books')
 
         })
-       
+       alert('book deleted');
     });
 
     var storage=multer.diskStorage({
@@ -126,6 +127,7 @@ booksRouter.get('/delete/:id',function(req,res,next){
         .then(function(){
             res.redirect('/books');
         })
+        alert('Book details updated');
     }) ;
     return booksRouter;
     }

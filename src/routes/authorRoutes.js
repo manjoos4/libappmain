@@ -4,6 +4,8 @@ const Authordata = require('../model/Authordata');
 const authorsRouter=express.Router();
 const fs=require('fs');
 const multer=require('multer');
+const alert = require('alert');
+
 function router(nav){
     // var authors=[
     //     {
@@ -61,7 +63,7 @@ authorsRouter.get('/delete/:id',function(req,res,next){
              res.redirect('/authors')
 
         })
-       
+       alert('Author deleted');
     });
 //update
 var storage=multer.diskStorage({
@@ -114,6 +116,7 @@ authorsRouter.post('/:id/update',upload,function(req,res){
     .then(function(){
         res.redirect('/authors');
     })
+    alert('author details updated');
 }) ;
 return authorsRouter;
 }

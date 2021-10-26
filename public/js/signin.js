@@ -6,7 +6,7 @@ function validate(){
       error2.innerHTML=" Username and Password is Valid";
       error2.style.border="3px solid cyan";
      error2.style.color="yellow";
-      document.getElementById("form").action ="/login"
+      document.getElementById("form").action ="/home"
 
     return true
 
