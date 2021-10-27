@@ -41,7 +41,7 @@ else
             }else{
                 console.log("success");
                 alert('User Login Success');
-                res.redirect("/home");
+                res.redirect('/home');
             }
         }
     }
