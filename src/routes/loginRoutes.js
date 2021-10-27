@@ -30,7 +30,9 @@ else
         password:item.password
     },(err,user)=>{
                 if(err){console.log(err);
-                alert('invalid credentials');}
+                alert('invalid credentials');
+                res.redirect('/');
+                }
         else{
             if (user===null){
                 console.log(user);
