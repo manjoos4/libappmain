@@ -17,7 +17,7 @@ var upload=multer({
 }).single('image');
 function router(nav){
 addauthorRouter.get('/',function(req,res){
-    res.render('addAuthor',{
+    res.render('addauthor',{
         nav,
         title:'Library'
     })

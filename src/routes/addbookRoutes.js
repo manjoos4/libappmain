@@ -18,7 +18,7 @@ var upload=multer({
 
 function router(nav){
 addbookRouter.get('/',function(req,res){
-    res.render('addBook',{
+    res.render('addbook',{
         nav,
         title:'Library'
     });

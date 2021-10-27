@@ -11,7 +11,7 @@ signupRouter.get('/',function(req,res){
         title:'Library'
     });
 });
-signupRouter.post("/add",(req,res)=>{
+signupRouter.post('/add',(req,res)=>{
     var item={
         firstname:req.body.fname,
         username:req.body.username,

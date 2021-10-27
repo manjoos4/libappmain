@@ -11,7 +11,7 @@ function router(nav){
     authorsRouter.get('/',function(req,res){
         Authordata.find()
         .then(function(authors){
-            res.render("authors",{
+            res.render('authors',{
                 nav,
                 title:'Authors',
                 authors

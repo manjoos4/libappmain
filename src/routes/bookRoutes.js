@@ -11,7 +11,7 @@ function router(nav){
     booksRouter.get('/',function(req,res){
         Bookdata.find()
         .then(function(books){
-            res.render("books",{
+            res.render('books',{
                 nav,
                 title:'Books',
                 books
