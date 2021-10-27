@@ -46,6 +46,7 @@ app.use('/authors',authorsRouter);
 app.use('/addbook',addbookRouter);
 app.use('/addauthor',addauthorRouter);
 app.use('/login',loginRouter);
+app.use('/login/add',loginRouter);
 app.use('/signup',signupRouter);
 
 

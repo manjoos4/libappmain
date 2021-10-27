@@ -14,7 +14,7 @@ loginRouter.get('/',function(req,res){
 })
 
 
-loginRouter.post("/add",(req,res)=>{
+loginRouter.post('/add',(req,res)=>{
     var item={
         username:req.body.username,
         password:req.body.password,
