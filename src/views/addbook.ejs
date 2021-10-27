@@ -8,7 +8,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-	
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
 		<link href="/css/styles.css" rel="stylesheet">
 	</head>
 	<body>
@@ -88,7 +90,7 @@
           
           <!--/stories-->
           <div class="row">    
-            <form method="POST" action="/admin/addbook/add" enctype="multipart/form-data">
+            <form method="POST" action="/addbook/add" enctype="multipart/form-data">
                 Title:<br><input type="text" name="title"><br><br>
                 Author:<br><input type="text" name="author"><br><br>
                 Genre:<br> <input type="text" name="genre"><br><br>

@@ -6,26 +6,7 @@ const multer=require('multer');
 const alert = require('alert');
 
 function router(nav){
-    // var books=[
-    //     {
-    //         title:'Tom and Jerry',
-    //         author:'Joseph Barbera',
-    //         genre:'Cartoon',
-    //         img:"tom.jpg"
-    //     },
-    //     {
-    //         title:'Harry Potter',
-    //         author:'J K Rowling',
-    //         genre:'Fantasy',
-    //         img:"Harry.jpeg"
-    //     },
-    //     {
-    //         title:'Pathummayude Aadu',
-    //         author:'Basheer',
-    //         genre:'Drama',
-    //         img:"basheer.jpg"
-    //     }
-    // ]
+    
     
     booksRouter.get('/',function(req,res){
         Bookdata.find()

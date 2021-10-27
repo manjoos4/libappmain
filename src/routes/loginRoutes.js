@@ -1,7 +1,6 @@
 const express=require('express');
 const loginRouter=express.Router();
 const Signupdata=require('../model/Signupdata');
-// const Admindata = require('../model/Admin');
 
 const bcrypt = require('bcrypt');
 const alert = require('alert');
@@ -13,9 +12,7 @@ loginRouter.get('/',function(req,res){
         title:'Library'
     });
 })
-// return loginRouter;
-// }
-// module.exports=router;
+
 
 loginRouter.post("/add",(req,res)=>{
     var item={
@@ -53,49 +50,3 @@ return loginRouter;
 module.exports=router;
 
  
-// loginRouter.post('/add',(req,res)=>{
-       
-//     let username = req.body.username;
-//     let password = req.body.password;
-   
-//     console.log(username,password);
-//     Signupdata.findOne({'username':username},(err,user)=>{
-//         if(user){
-//             bcrypt.compare(password,user.password)
-//             .then((status)=>{
-//                 if(status){
-//                     console.log('User Added');
-//                     div.user=username;
-//                     res.redirect('/index');
-//                 }else{
-//                     console.log('Wrong Password');
-//                     res.render('/');
-//                     alert('Wrong Password!!!');
-//                 }
-//             })
-//         }else if(!user){
-//             Admindata.find({'username':username},(err,admin)=>{
-//                 if(admin){
-//                     if(password === '12345'){
-//                         console.log('Admin Added');
-//                         div.user="Admin";
-//                         res.redirect('/index');
-//                     }else{
-//                         console.log('Wrong pwd');
-//                         res.redirect('/');
-//                     }
-//                 }else{
-//                         res.redirect('/');
-//                         alert('Not an Admin!!!');
-//                 }
-//             });
-//         }else{
-//             res.render('signup');
-//             alert('User not Found!!! Please Sign-In');
-//         }
-//     });
-// });
-// return loginRouter;
-// }
-
-// module.exports = router;

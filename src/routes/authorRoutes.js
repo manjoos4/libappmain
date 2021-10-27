@@ -7,28 +7,6 @@ const multer=require('multer');
 const alert = require('alert');
 
 function router(nav){
-    // var authors=[
-    //     {
-        
-    //         author:'Joseph Barbera',
-    //         genre:'Cartoon',
-    //         img:"jbarbera.jpg"
-        
-    //     },
-    //     {
-            
-    //         author:'J K Rowling',
-    //         genre:'Fantasy',
-    //         img:'rowling.jfif'
-    //     },
-    //     {
-            
-    //         author:'Basheer',
-    //         genre:'Drama',
-    //         img:'Basheer.jpg'
-    //     }
-    // ]
-    
     
     authorsRouter.get('/',function(req,res){
         Authordata.find()
