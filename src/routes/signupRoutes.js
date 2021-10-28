@@ -1,7 +1,7 @@
 const express=require('express');
 const signupRouter=express.Router();
 const Signupdata=require('../model/Signupdata');
-const alert = require('alert');
+// const alert = require('alert');
 
 
 function router(nav){
