@@ -2,7 +2,6 @@ const express=require('express');
 const loginRouter=express.Router();
 const Signupdata=require('../model/Signupdata');
 
-const bcrypt = require('bcrypt');
 const alert = require('alert');
 
 function router(nav){
@@ -22,7 +21,7 @@ loginRouter.post('/add',(req,res)=>{
     
 if((item.username==="admin")&&(item.password==="12345")){
     alert(' admin login is success');
-    res.redirect("/home")
+    res.redirect('/home')
 }
 else
     Signupdata.findOne({
@@ -30,13 +29,11 @@ else
         password:item.password
     },(err,user)=>{
                 if(err){console.log(err);
-                alert('invalid credentials');
-                res.redirect('/');
-                }
+                alert('invalid credentials');}
         else{
             if (user===null){
                 console.log(user);
-                alert("invalid credentials");
+                alert('invalid credentials');
                 res.redirect('/');
             }else{
                 console.log("success");
