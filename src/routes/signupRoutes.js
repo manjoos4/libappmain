@@ -25,12 +25,12 @@ signupRouter.post('/add',(req,res)=>{
         else{
             if(user !== null){
                 console.log("user already taken");
-                alert('user already taken');
+                // alert('user already taken');
                 res.redirect('/signup');
             }else{
             var sign=Signupdata(item);
             sign.save();
-            alert('user added successfully');
+            // alert('user added successfully');
             res.redirect('/');
         }
     }
