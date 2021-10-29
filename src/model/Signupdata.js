@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/library')
-const Schema=mongoose.Schema;
+mongoose.connect('mongodb+srv://userone:userone@ictakfiles.7gpgq.mongodb.net/LIBRARYAPP?retryWrites=true&w=majority');
 
+const Schema=mongoose.Schema;
 const SignupSchema=new Schema({
     firstname:String,
     username:String,
