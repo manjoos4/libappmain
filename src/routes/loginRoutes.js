@@ -29,18 +29,18 @@ else
         password:item.password
     },(err,user)=>{
                 if(err){console.log(err);
-                // alert('invalid credentials');
+                 alert('invalid credentials');
             res.redirect('/')}
         else{
             if (user===null){
-                // console.log(user);
-                // alert('invalid credentials');
-                // res.redirect('/');
+                console.log(user);
+                alert('invalid credentials');
+                
                 res.redirect('/')
             }else{
-                // console.log("success");
-                // alert('User Login Success');
-                res.redirect('/home');
+                console.log("success");
+                 alert('User Login Success');
+                res.redirect('/home/userlogin');
             }
         }
     }
